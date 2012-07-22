@@ -1,0 +1,13 @@
+@CHARSET "ISO-8859-1";
+<style type="text/css">
+		input{font-size:18;font-weight:bold;color:purple}
+		td{font-size:18;font-weight:bold;color:green}
+		th{text-align:center}
+		i{color:red}
+		a{font-size:20;font-weight:bold;text-decoration:none}
+		a:hover{font-size:22;}
+		body{background-color: maroon}
+	    img{position:relative;left:30}
+		div{position:relative;top=+20;color:yellow;font-size:20;font-weight:bold;}
+	</style>
+	

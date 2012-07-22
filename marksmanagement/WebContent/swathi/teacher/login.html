@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+	<script language=javascript>
+	
+	function checkData()
+	{
+		var nm=document.form1.user.value		
+		var key=document.form1.key.value
+				
+		if(nm=="" || key=="")
+		{
+			if(nm=="")
+			{
+				alert("Name should not left blank")
+				document.form1.user.value=""
+				document.form1.user.focus()
+				return false
+			}
+
+			if(key=="")
+			{
+				alert("Enter Password")
+				document.form1.key.value=""
+				document.form1.key.focus()
+				return false
+			}			
+
+		}
+		else
+		{
+			return true
+			
+		}
+	}
+
+	</script>
+</head>
+<body bgcolor="pink" onLoad='document.form1.user.focus()'>
+<form name=form1 onSubmit="return checkData()" METHOD=POST ACTION="login.jsp" autocomplete=false target="_parent">
+<table ALIGN=center width=350 hight=400>
+<tr>
+  <th colspan=5 hight=30><i>TEACHER LOGIN</i></th>
+ </tr>
+  
+<tr>
+	<td width=120>USER NAME	:</td>
+	<td><input type=text name="user" size=20 maxlength=50 ></td>
+</tr>
+
+<tr>
+	<td width=120>PASSWORD	:</td>
+	<td><input type=password name="key" size=20 maxlength=50></td>
+</tr>
+<tr>
+	<th><input type=submit  name=send value="Sign In" ></th>
+	<th><input type=reset value="Reset   " onClick='document.form1.user.focus()'></th>
+</tr>
+<colgroup span=4>
+
+<img align=right src="images\login.jpg" width=350 height=470>
+</colgroup>
+</table>
+
+
+</form>
+
+</body>
+</html>

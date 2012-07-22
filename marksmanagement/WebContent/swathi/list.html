@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+
+<script language=javascript>
+
+timer=setInterval('showTime()',1000)
+
+function showTime()
+{
+	var time = new Date
+	var mess 
+	var x=time.getHours()
+
+	if(x>12)
+	{
+	x=x-12
+	mess=formatHours(x) + " : " + formatMinutes(time.getMinutes()) + " : " + formatSeconds(time.getSeconds())+"  PM"
+	}
+	else
+	if(x==12)
+	{
+	mess=formatHours(x) + " : " + formatMinutes(time.getMinutes()) + " : " + formatSeconds(time.getSeconds())+"  PM"
+	}
+	else
+	mess=formatHours(x) + " : " + formatMinutes(time.getMinutes()) + " : " + formatSeconds(time.getSeconds())+"  AM"
+
+	disp.innerHTML=mess + "<br>" + time.toDateString().fontcolor("yellow")
+
+}
+
+function formatHours(h)
+{
+	if(h>9)
+		return h;
+	else
+		return "0"+h;
+}
+function formatMinutes(m)
+{
+	if(m>9)
+		return m;
+	else
+		return "0"+m;
+}
+
+function formatSeconds(s)
+{
+	if(s>9)
+		return s;
+	else
+		return "0"+s;
+}
+
+function makeFavourite()
+{
+	window.external.AddFavorite('http://localhost/php/kccs/kccs.html','KCCS');
+}
+</script>
+</head>
+<body>
+<img src="images\Icons\home_48.png" width="30" height="30" onClick='javascript:window.parent.document.location="home.html"'><br><br><br>
+
+ 
+ 
+
+ <a href="admin/login.html" target="dest"><font color="yellow">	Admin Login</a> <br><br><br>
+ <a href="teacher/login.html" target="dest"><font color="yellow">	Teacher Login </a> <br><br><br>
+ 
+ 
+
+ <div id=disp>
+ </div>
+
+
+</body>
+</html>

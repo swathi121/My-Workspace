@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+<style type="text/css">
+	cname{font-size:40;font-weight:bold;color:black}
+	
+	body{background-color:lime}
+	div{position:relative;top=+20;color:yellow;font-size:20;font-weight:bold;}
+</style>
